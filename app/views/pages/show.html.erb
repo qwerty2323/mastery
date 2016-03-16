@@ -1,0 +1,7 @@
+<%= render 'layouts/header' %>
+<h1><%= @page.name %></h1>
+<div class="container">
+  <%= markdown(@page.content) %>
+</div>
+
+<%= render 'layouts/footer' %>
