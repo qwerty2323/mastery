@@ -4,7 +4,16 @@
 ## What is done:
 
 - [x] README
-
+- [x] Page name is a string
+  - [x] Validates regexp [a-zA-Z0-9]
+  - [x] Russian symbols accepted :ru:
+- [x] Text field accepts html markup
+    - [x] Has a preproccessing for any create/update actions:
+```
+      **str** -> <b>str</b>
+      \\str\\ -> <i>str</i>
+      ((name1/name2/name3[str])) -> links <a href="name1/name2/name3">[str]</a>
+```
 ## What is need to be done:
 
 - [ ] Main page contains _index_ page with subtree.
@@ -19,16 +28,6 @@ Example:
 - page
 ```
 
-  - [ ] Page name is a string
-    - [ ] Validates regexp [a-zA-Z0-9]
-    - [ ] Russian symbols accepted :ru:
-  - [ ] Text field accepts html markup
-    - [ ] Has a preproccessing for any create/update actions:
-```
-      **str** -> <b>str</b>
-      \\str\\ -> <i>str</i>
-      ((name1/name2/name3[str])) -> links <a href="name1/name2/name3">[str]</a>
-```
 - [ ] Page path:
     - [ ] [site]/name1/name2/name3 -> Page 'name3' is shown.
       - [ ] text
