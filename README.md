@@ -8,7 +8,7 @@
   - [x] Validates regexp [a-zA-Zа-яА-Я0-9]
   - [x] Russian symbols accepted :ru:
 - [x] Text field accepts html markup
-    - [x] Has a preproccessing for any create/update actions:
+    - [x] Has a preproccessing for any create/update actions (_incomplete_):
 ```
       **str** -> <b>str</b>
       _str_ -> <i>str</i>
@@ -43,10 +43,10 @@ Example:
  - Routing дерева.
 
 ### Реализовано не в полном объёме/реализовано в другом виде:
+ - Specs
  - Процессинг текста
    - Строка в скобках не рендерится в ссылки.
-   - Строка с бэкслешами не рендерится в <i>
-   - Исключительно русские символы не проходят для названия сайта
+   - Строка с бэкслешами не рендерится в \<i>
 
 ### Прочие замечания:
  - В PageController повторения
