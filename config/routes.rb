@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
   root 'pages#index'
-  resources :pages
-
+  resources :pages, path: "", path_names: { new: 'add' }
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

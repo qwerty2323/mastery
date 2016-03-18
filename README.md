@@ -6,7 +6,7 @@
 - [x] README
 - [x] Page name is a string
   - [x] Validates regexp [a-zA-Z0-9]
-  - [x] Russian symbols accepted :ru:
+  - [x] Russian symbols accepted :ru: but, sadly, only in combination with english
 - [x] Text field accepts html markup
     - [x] Has a preproccessing for any create/update actions:
 ```
@@ -15,7 +15,7 @@
 ```
 ## What is need to be done:
 
-- [ ] Main page contains _index_ page with subtree.
+- [x] Main page contains _index_ page with subtree.
 
 Example:
 
@@ -32,15 +32,21 @@ Example:
       - [x] text
       - [x] page title
       - [x] header
-      - [ ] subtree
+      - [x] subtree
     - [ ] [site]/name1/name2/name3/edit -> edit mode for header, slug. Redirect to :arrow_up:  :arrow_up:
     - [ ] [site]/name1/name2/name3/add -> create new page as subpage of name3. Redirect to [site]/name1/name2/name3/new-page-slug
     - [ ] [site]/add -> root page creation form
     
-## Contributing
+## Сопроводительное письмо:
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/qwerty2323/mastery.
+### Не реализовано:
+ - Routing дерева.
 
-## License
+### Реализовано не в полном объёме/реализовано в другом виде:
+ - Процессинг текста
+   - Строка в скобках не рендерится в ссылки.
+   - Строка с бэкслешами не рендерится в <i>
+   - Исключительно русские символы не проходят для названия сайта
 
-The app is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+### Прочие замечания:
+ - В PageController повторения

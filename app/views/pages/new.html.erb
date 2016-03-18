@@ -5,7 +5,7 @@
 <%= form_for(@pages) do |f| %>
   <div class="form-group">
     <%= f.label :parent_id %>
-    <%= f.collection_select :parent_id, Page.all.order(:name), :id, :name, include_blank: true %>
+    <%= f.collection_select :parent_id, Page.all, :id, :parent_id, include_blank: true %>
   </div>
   <div class="form-group">
     <%= f.label :name %><br>
