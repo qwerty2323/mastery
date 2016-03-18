@@ -1,5 +1,16 @@
 <%= render 'layouts/header' %>
+
 <h1>Pages</h1>
-  <%= link_to 'Create new page', pages_new_path %>
+<div class="btn-group" role="group">
+  <button type="button" class="btn btn-default">
+    <%= link_to 'Create new page', new_page_path %>
+  </button>
+</div>
+
+<div class="container">
+  <% Page.walk_tree do |page, level| %>
+    <%= link_to "#{'--'*level}#{page.name}", page_path(page) %><br />
+  <% end %>
+</div>
 
 <%= render 'layouts/footer' %>
