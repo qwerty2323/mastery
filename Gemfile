@@ -24,7 +24,7 @@ group :development, :test do
   gem 'guard'
   gem 'guard-rspec', require: false
   gem 'spring-commands-rspec'
-
+  gem 'database_cleaner'
 end
 
 group :development do
