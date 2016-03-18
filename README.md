@@ -5,8 +5,8 @@
 
 - [x] README
 - [x] Page name is a string
-  - [x] Validates regexp [a-zA-Z0-9]
-  - [x] Russian symbols accepted :ru: but, sadly, only in combination with english
+  - [x] Validates regexp [a-zA-Zа-яА-Я0-9]
+  - [x] Russian symbols accepted :ru:
 - [x] Text field accepts html markup
     - [x] Has a preproccessing for any create/update actions:
 ```
