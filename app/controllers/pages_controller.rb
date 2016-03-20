@@ -1,22 +1,21 @@
 class PagesController < ApplicationController
+  before_action :set_page, only: [:show, :edit, :update, :destroy]
+  before_action :find_parent, only: :new
   def index
     @pages = Page.all
   end
 
   def show
-    @page = Page.find(params[:id])
   end
 
   def new
-    @pages = Page.new
+    @pages = Page.new(parent_id: @parent_id)
   end
 
   def edit
-    @page = Page.find(params[:id])
   end
 
-  def update
-    @page = Page.find(params[:id])    
+  def update    
     if @page.update_attributes(page_params)
       redirect_to @page
     else
@@ -25,7 +24,6 @@ class PagesController < ApplicationController
   end
 
   def destroy
-    @page = Page.find(params[:id])
     @page.destroy
     redirect_to :root
   end
@@ -40,7 +38,17 @@ class PagesController < ApplicationController
   end
 
   private
+  def set_page
+    @page = Page.find(params[:id])
+  end
+  
   def page_params
     params.require(:page).permit(:name, :content, :parent_id)
+  end
+
+  def find_parent
+    if params[:parent_id]
+      @parent_id = params[:parent_id]
+    end
   end
 end

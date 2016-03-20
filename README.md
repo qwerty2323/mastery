@@ -10,12 +10,14 @@
 - [x] Text field accepts html markup
     - [x] Has a preproccessing for any create/update actions (_incomplete_):
 ```
-      **str** -> <b>str</b>
-      _str_ -> <i>str</i>
+      **str**                        -> <b>str</b>
+      _str_                          -> <i>str</i>
+      [URL and title](/url/ "title") -> <a href="/url/" title="title">URL and title</a>
 ```
 ## What is need to be done:
 
 - [x] Main page contains _index_ page with subtree.
+- [x] Fixed preselection of parent.
 
 Example:
 
@@ -45,8 +47,4 @@ Example:
 ### Реализовано не в полном объёме/реализовано в другом виде:
  - Specs
  - Процессинг текста
-   - Строка в скобках не рендерится в ссылки.
    - Строка с бэкслешами не рендерится в \<i>
-
-### Прочие замечания:
- - В PageController повторения
